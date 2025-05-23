@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tags Básicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h4 {
+            color: #5b7885;
+        }
+
+        caption, table, th, td {
+            border: 1px solid #333;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        th {
+            background: #cfcfcf;
+        }
+
+        code {
+            background: #dbdbdb;
+            padding: 1px 5px;
+            border-radius: 2px;
+        }
+
+        pre {
+            background: #dbdbdb;
+            padding: 5px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+
+        caption {
+            background-color: rgb(199, 236, 253);
+        }
+
+        mark {
+            background-color: rgb(255, 255, 210);
+        }
+
+        hr {
+            margin: 50px 1px;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="tags-basicas.html">Tags Básicas</a> |
+        <a href="tags-de-texto.html">Tags de Texto</a> |
+        <a href="tags-semanticas.html">Tags Semanticas</a> |
+        <a href="tags-de-formularios.html">Tags de Formulário</a> |
+        <a href="tags-containers">Tags Containers</a> |
+    </nav>
+
+    <section id="container-tags-basicas">
+        <h2>Tags Básicas de HTML</h2>
+        
+        <p>As tags básicas de HTML são essenciais para estruturar qualquer página web. Veja as principais:</p>
+        <ul>
+            <li>
+                <code>&lt;!DOCTYPE html&gt;</code>: Define o tipo do documento e a versão do HTML.
+            </li>
+            <li>
+                <code>&lt;html&gt;</code>: Elemento raiz que envolve todo o conteúdo da página.
+            </li>
+            <li>
+                <code>&lt;head&gt;</code>: Contém metadados, links para estilos, scripts e o título da página.
+            </li>
+            <li>
+                <code>&lt;meta&gt;</code>: Define metadados como codificação de caracteres e descrição.
+            </li>
+            <li>
+                <code>&lt;title&gt;</code>: Define o título exibido na aba do navegador.
+            </li>
+            <li>
+                <code>&lt;body&gt;</code>: Contém todo o conteúdo visível da página, como textos, imagens e links.
+            </li>
+            <li>
+                <code>&lt;h1&gt;...&lt;h6&gt;</code>: Títulos e subtítulos, do mais importante (<code>h1</code>) ao
+                menos importante (<code>h6</code>).
+            </li>
+            <li>
+                <code>&lt;p&gt;</code>: <i>Paragraph.</i> Define um parágrafo de texto.
+            </li>
+            <li>
+                <code>&lt;a&gt;</code>: <i>Anchor.</i> Cria um link para outra página ou recurso.
+            </li>
+            <li>
+                <code>&lt;img&gt;</code>: <i>Image.</i> Insere uma imagem na página.
+            </li>
+            <li>
+                <code>&lt;figcaption&gt;</code>: Define a legenda de uma imagem.
+            </li>
+            <li>
+                <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> e <code>&lt;li&gt;</code>: <i>Unorder List, Order List,
+                    List Item.</i> Criam listas não ordenadas, ordenadas e itens de lista.
+            </li>
+            <li>
+                <code>&lt;div&gt;</code>: <i>Division.</i> Define uma divisão ou seção genérica no
+                documento.
+            </li>
+            <li>
+                <code>&lt;span&gt;</code>: Marca uma extensão ou parte genérica no texto para aplicar
+                estilos ou scripts.
+            </li>
+        </ul>
+        <h4>Exemplo de Estrutura Básica</h4>
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="pt-BR"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;Minha Página&lt;/title&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+                    &lt;p&gt;Este é um exemplo de página HTML.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+
+        <h4>Exemplos de Tags Básicas</h4>
+
+        <h1>Título com &lt;h1&gt</h1>
+        <h3>Subtítulo com &lt;h3&gt;</h3>
+
+        <p>Parágrafo com &lt;p&gt;</p>
+        <p>Separe destaques com a tag <span style="color:tomato;">&lt;span&gt;</span> em seu texto.</p>
+        <a href="https://www.w3schools.com">W3Schools.com</a>
+
+        <div style="border:1px solid #aaa; padding:10px; margin-top:10px;">
+            Este é um container usando a tag <code>&lt;div&gt;</code>.
+        </div>
+       
+        <ul>
+            <li>Item de lista não ordenada 1</li>
+            <li>Item de lista não ordenada 2</li>
+            <li>Item de lista não ordenada 3</li>
+        </ul>
+
+        <ol>
+            <li>Item de lista ordenada 1</li>
+            <li>Item de lista ordenada 2</li>
+            <li>Item de lista ordenada 3</li>
+        </ol>
+        
+        <figure>
+            <img src="https://img.freepik.com/vetores-gratis/graident-ai-robot-vectorart-em-ingles_78370-4114.jpg"
+                alt="robot" style="width:200px">
+            <figcaption>Fig.1: Imagem com legenda usando &lt;figure&gt;, &lt;img&gt; e
+                &lt;figcaption&gt;.</figcaption>
+        </figure>
+    </section>
+
+    <hr>
+
+    <section id="container-tags-tabela">
+        <h2>Tags de Tabela em HTML</h2>
+        <p>As principais tags para criar tabelas
+            em HTML são:</p>
+        <ul>
+            <li>
+                <code>&lt;table&gt;</code>: Define o início e o fim da tabela.
+            </li>
+            <li>
+                <code>&lt;caption&gt;</code>: Adiciona um título à tabela.
+            </li>
+            <li>
+                <code>&lt;thead&gt;</code>: Agrupa o cabeçalho da tabela.
+            </li>
+            <li>
+                <code>&lt;tbody&gt;</code>: Agrupa o corpo da tabela.
+            </li>
+            <li>
+                <code>&lt;th&gt;</code>: Define um cabeçalho de coluna.
+            </li>
+            <li>
+                <code>&lt;tr&gt;</code>: Define uma linha da tabela.
+            </li>
+            <li>
+                <code>&lt;td&gt;</code>: Define uma célula de dados.
+            </li>
+            <li>
+                <code>&lt;tfoot&gt;</code>: Agrupa o rodapé da tabela.
+            </li>
+        </ul>
+        <h4>Exemplo de Tabela</h4>
+        <table>
+            <caption>Exemplo de Tabela HTML</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maria</td>
+                    <td>28</td>
+                    <td>São Paulo</td>
+                </tr>
+                <tr>
+                    <td>João</td>
+                    <td>17</td>
+                    <td>Recife</td>
+                </tr>
+                <tr>
+                    <td>José</td>
+                    <td>36</td>
+                    <td>Rio de Janeiro</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total das Idades</td>
+                    <td colspan="1" style="background-color:gainsboro;">81</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tags de Formulários</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        code {
+            background: #dbdbdb;
+            padding: 1px 5px;
+            border-radius: 2px;
+        }
+
+        pre {
+            background: #dbdbdb;
+            padding: 5px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+
+        mark {
+            background-color: rgb(255, 255, 210);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="tags-basicas.html">Tags Básicas</a> |
+        <a href="tags-de-texto.html">Tags de Texto</a> |
+        <a href="tags-semanticas.html">Tags Semanticas</a> |
+        <a href="tags-de-formularios.html">Tags de Formulário</a> |
+        <a href="tags-containers">Tags Containers</a> |
+    </nav>
+
+    <section id="container-tags-formulario">
+        <h2>Tags de Formulário em HTML</h2>
+        <p>
+            As tags de formulário em HTML permitem criar interfaces para entrada de dados pelo usuário. Elas são
+            essenciais para coletar e enviar informações em páginas web, como cadastros, pesquisas e autenticação.
+        </p>
+        <ul>
+            <li>
+                <code>&lt;form&gt;</code>: Define o início e o fim de um formulário.
+                <ul>
+                    <li>action: URL para onde os dados do formulário serão enviados.</li>
+                    <li>method: Método de envio dos dados (get ou post)</li>
+                </ul>
+            </li>
+            <li>
+                <code>&lt;fieldset&gt;</code>: É um container que agrupa elementos relacionados em um formulário.
+            </li>
+            <li>
+                <code>&lt;legend&gt;</code>: Título do <span style="color: #6e6e6e;">&lt;fieldset&gt;</span>.
+            </li>
+            <li>
+                <code>&lt;label&gt;</code>: Etiqueta, rótulo descritivo para um campo do formulário.
+                <ul>
+                    <li>for: Associa o rótulo do campo ao <span style="color: #6e6e6e;">&lt;input&gt;</span> correspondente.</li>
+                </ul>
+            </li>
+            <li>
+                <code>&lt;input&gt;</code>: Campo de entrada de dados (texto, senha, email, checkbox, radio, etc.).
+                <ul>
+                    <li>type: Tipo de entrada (text, password, email, checkbox, radio, etc.).</li>
+                    <li>id: Identificador único do campo.</li>
+                    <li>name: Nome do campo enviado ao servidor.</li>
+                    <li>value: Valor padrão do campo.</li>
+                    <li>placeholder: Texto de exemplo dentro do campo.</li>
+                    <li>required: indica que é um campo obrigatório.</li>
+                </ul>
+            </li>
+            <li>
+                <code>&lt;textarea&gt;</code>: Área de texto para várias linhas.
+                 <ul>
+                    <li>id: Identificador único do campo.</li>
+                    <li>name: Nome do campo enviado ao servidor.</li>
+                    <li>rows: Número de linhas visíveis.</li>
+                    <li>cols: Número de colunas visíveis.</li>
+                    <li>placeholder: Texto de exemplo dentro da área de texto.</li>                    
+                </ul>
+            </li>
+            <li>
+                <code>&lt;select&gt;</code>: Lista suspensa de opções.
+                <ul>
+                    <li>id: Identificador único do campo.</li>
+                    <li>name: Nome do campo enviado ao servidor.</li>
+                </ul>
+            </li>
+            <li>
+                <code>&lt;option&gt;</code>: Opção dentro de um <code>&lt;select&gt;</code>.
+                <ul>
+                    <li>value: Valor enviado ao selecionar a opção.</li>
+                    <li>selected: Indica a opção padrão selecionada.</li>
+                </ul>
+            </li>
+            <li>
+                <code>&lt;button&gt;</code>: Botão para enviar ou redefinir o formulário.
+                <ul>
+                    <li>type: Define a função do botão (submit para enviar, reset para limpar).</li>
+                    <li>name: Nome do botão enviado ao servidor.</li>
+                    <li>value: Valor do botão enviado ao servidor.</li>
+                    <li>disabled: Desabilita o botão.</li>
+                    <li>onclick: Ação a ser executada ao clicar no botão.</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <h4>Exemplo de Formulário</h4>
+        <form>
+            <fieldset>
+                <legend>CADASTRO</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" cols="30"></textarea><br><br>
+                <label for="cidade">Cidade:</label>
+                <select id="cidade" name="cidade">
+                    <option selected>Selecione</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="pe">Recife</option>  
+                </select><br><br>
+                <button type="submit" disabled>Enviar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="alert ('Usado para realizar ações com javascript')">Alert</button>
+            </fieldset> 
+            <br>            
+            <fieldset>
+                <legend>Todos os Tipos de Inputs</legend>
+                <label for="text">Texto:</label>
+                <input type="text" id="text" name="text"><br><br>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password"><br><br>
+
+                <label for="email2">Email:</label>
+                <input type="email" id="email2" name="email2"><br><br>
+
+                <label for="number">Número:</label>
+                <input type="number" id="number" name="number"><br><br>
+
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date"><br><br>
+
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time"><br><br>
+
+                <label for="color">Cor:</label>
+                <input type="color" id="color" name="color"><br><br>
+
+                <label for="file">Arquivo:</label>
+                <input type="file" id="file" name="file"><br><br>
+
+                <label for="checkbox">Checkbox:</label>
+                <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+
+                <label for="radio1">Radio 1:</label>
+                <input type="radio" id="radio1" name="radio-group" value="1">
+                <label for="radio2">Radio 2:</label>
+                <input type="radio" id="radio2" name="radio-group" value="2"><br><br>
+
+                <label for="range">Range:</label>
+                <input type="range" id="range" name="range" min="0" max="10"><br><br>
+
+                <label for="tel">Telefone:</label>
+                <input type="tel" id="tel" name="tel"><br><br>
+
+                <label for="url">URL:</label>
+                <input type="url" id="url" name="url"><br><br>
+
+                <label for="search">Busca:</label>
+                <input type="search" id="search" name="search"><br><br>
+
+                <label for="hidden">Hidden:</label>
+                <input type="hidden" id="hidden" name="hidden" value="oculto">
+                <span style="color: #888;">(campo oculto)</span><br><br>
+
+                <label for="datetime-local">Data e Hora Local:</label>
+                <input type="datetime-local" id="datetime-local" name="datetime-local"><br><br>
+
+                <label for="month">Mês:</label>
+                <input type="month" id="month" name="month"><br><br>
+
+                <label for="week">Semana:</label>
+                <input type="week" id="week" name="week"><br><br>
+
+                <input type="button" value="Botão" onclick="alert('Muito usado para executar funções javascript ou para compatibilidade com navegadores antigos')">
+                
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+
+</html>

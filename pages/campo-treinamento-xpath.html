@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Treinamento de Automação</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <main>
+        <h1>Formulário de Treinamento de Automação</h1>
+        <form action="/salvar" method="POST">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <!-- required -->
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <!-- type="email" -->
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="18" max="99">
+                <!-- min="18" max="99" -->
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" minlength="6">
+                <!-- minlength="6" -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferências</legend>
+                <label>
+                    <input type="checkbox" name="newsletter" value="sim">
+                    Desejo receber newsletter
+                </label>
+
+                <label for="cor">Cor favorita:</label>
+                <select id="cor" name="cor" required>
+                    <option value="">Selecione</option>
+                    <option value="azul">Azul</option>
+                    <option value="verde">Verde</option>
+                    <option value="vermelho">Vermelho</option>
+                </select>
+                <!-- required -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Gênero</legend>
+                <label>
+                    <input type="radio" name="genero" value="masculino" required>
+                    Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="feminino">
+                    Feminino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="outro">
+                    Outro
+                </label>
+                <!-- required -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentários</legend>
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" maxlength="200"></textarea>
+                <!-- maxlength="200" -->
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
